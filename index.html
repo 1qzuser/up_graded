@@ -1,0 +1,61 @@
+<!-- /*
+ * @Author: coisini 
+ * @Date: 2021-05-30 18:18:06 
+ * @Last Modified by: 峰峰吃芒果
+ * @Last Modified time: 2021-05-30 18:29:16
+ */ -->
+
+<html lang="en">
+<head>
+    <title>2021湖工专升本倒计时</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="https://gitee.com/ffboke/image/raw/master/2021/05/30/9afea05b824075edddaf42a4ff0c76ee.png" type="image/x-icon">
+    <!-- font files -->
+    <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <!-- /font files -->
+    <!-- css files -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- /css files -->
+</head>
+
+<body>
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <div class="w3ls-main-title">
+                    <h1>2021年湖工专升本考试倒计时</h1>
+                    <div class="demo2"></div>
+                    <!--newsletter-->
+                    <div class="w3layouts-newsletter">
+                        <h2>未来的你，一定会感谢现在拼命的自己。</h2>
+                        <h2>你背单词时，阿拉斯加的鳕鱼正在跃出水面，你算数学时，太平洋彼岸的海鸥振翅掠过城市上方。但是啊，别着急，当你为你的未来努力奋斗的时候，那些你觉得你一辈子都不会见到的景色，那些你觉得你终生都不会遇见的人，正在一步步向你走来。</h2>
+                    </div>
+                </div>
+                <canvas id="demo-canvas"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- /main-section -->
+    <!-- Counter required files -->
+    <link rel="stylesheet" href="css/dscountdown.css" type="text/css" media="all">
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/dscountdown.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('.demo2').dsCountDown({
+                endDate: new Date("6, 19, 2021 09:00:00"),
+                theme: 'black'
+            });
+        });
+    </script>
+    <!-- //Counter required files -->
+    <!-- js files -->
+    <script src="js/rAF.js"></script>
+    <script src="js/demo-2.js"></script>
+    <!-- /js files -->
+</body>
+
+</html>
