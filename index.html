@@ -28,8 +28,7 @@
                     <div class="demo2"></div>
                     <!--newsletter-->
                     <div class="w3layouts-newsletter">
-                        <h2>未来的你，一定会感谢现在拼命的自己。</h2>
-                        <h2>你背单词时，阿拉斯加的鳕鱼正在跃出水面，你算数学时，太平洋彼岸的海鸥振翅掠过城市上方。但是啊，别着急，当你为你的未来努力奋斗的时候，那些你觉得你一辈子都不会见到的景色，那些你觉得你终生都不会遇见的人，正在一步步向你走来。</h2>
+                        <h2><p id="hitokoto"><p id="hitokoto_text">努力获取中...</p></p></h2>
                     </div>
                 </div>
                 <canvas id="demo-canvas"></canvas>
@@ -42,7 +41,20 @@
 
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+    
     <script type="text/javascript" src="js/dscountdown.min.js"></script>
+    <!-- 实现一言 -->
+    <script>
+        fetch('https://v1.hitokoto.cn')
+          .then(response => response.json())
+          .then(data => {
+            const hitokoto = document.getElementById('hitokoto_text')
+            hitokoto.href = 'https://hitokoto.cn/?uuid=' + data.uuid
+            hitokoto.innerText = data.hitokoto
+          })
+          .catch(console.error)
+      </script>
+      
     <script>
         jQuery(document).ready(function($) {
             $('.demo2').dsCountDown({
@@ -55,6 +67,7 @@
     <!-- js files -->
     <script src="js/rAF.js"></script>
     <script src="js/demo-2.js"></script>
+    <script src="js/sty.js"></script>
     <!-- /js files -->
 </body>
 
